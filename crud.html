@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>CRUD System</title>
+  </head>
+  <body>
+    <section>
+      <div class="container text-center">
+        <img src="./img/2028994.png" class="text-center" alt="" srcset="" />
+        <div class="row w-75 mx-auto p-5">
+          <label for="productNameInp " class="text-start text-white p-2"
+            >Product Name</label
+          >
+          <input type="text" id="productNameInp" class="form-control mb-3" />
+          <span id="validName" class="text-danger"></span>
+          <label for="productPriceInp" class="text-start text-white p-2"
+            >Product Price</label
+          >
+          <input type="text" id="productPriceInp" class="form-control mb-3" />
+          <span id="validPrice" class="text-danger"></span>
+
+          <label for="productCategoryInp" class="text-start text-white p-2"
+            >Product Category</label
+          >
+          <input
+            type="text"
+            id="productCategoryInp"
+            class="form-control mb-3"
+          />
+          <span id="validCategory" class="text-danger"></span>
+
+          <label for="productDescInp" class="text-start text-white p-2"
+            >Product Description</label
+          >
+          <input type="text" id="productDescInp" class="form-control mb-3" />
+          <span id="validDesc" class="text-danger"></span>
+
+          <button
+            class="btn btn-success btn-sm w-50 p-2 my-3"
+            id="add"
+            onclick="addProduct()"
+          >
+            Add Product
+          </button>
+          <button
+            class="btn btn-success btn-sm w-50 p-2 my-3 d-none"
+            id="update"
+            onclick="updateProduct()"
+          >
+            Update Peoduct
+          </button>
+        </div>
+        <div class="row w-75 mx-auto py-3"></div>
+        <div
+          class="row w-100 mx-auto my-5 py-5 justify-content-center align-items-center"
+        >
+          <div class="col-md-6">
+            <input
+              type="text"
+              oninput="searchProducts()"
+              placeholder="search Products ..."
+              id="searchInp"
+              class="form-control"
+            />
+          </div>
+
+          <div
+            class="col-md-10 col-sm-10 col-xs-10 py-3 d-flex justify-content-center align-items-center align-items-center mx-auto"
+          >
+            <table class="table text-center m-auto">
+              <thead class="text-head">
+                <th>index</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Delete</th>
+                <th>Update</th>
+              </thead>
+              <tbody id="tableBody" class="text-white"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
