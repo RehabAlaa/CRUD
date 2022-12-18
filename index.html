@@ -14,18 +14,28 @@
   <body>
     <section>
       <div class="container text-center">
-        <img src="./img/2028994.png" class="text-center" alt="" srcset="" />
+        <img src="./img/png rehab.png" class="text-center" alt="" srcset="" />
         <div class="row w-75 mx-auto p-5">
           <label for="productNameInp " class="text-start text-white p-2"
             >Product Name</label
           >
-          <input type="text" id="productNameInp" class="form-control mb-3" />
-          <span id="validName" class="text-danger"></span>
+          <input
+            type="text"
+            id="productNameInp"
+            class="form-control mb-3"
+            oninput="validationProductName()"
+          />
+          <small id="validName" class="text-danger text-start"></small>
           <label for="productPriceInp" class="text-start text-white p-2"
             >Product Price</label
           >
-          <input type="text" id="productPriceInp" class="form-control mb-3" />
-          <span id="validPrice" class="text-danger"></span>
+          <input
+            type="text"
+            id="productPriceInp"
+            class="form-control mb-3"
+            oninput="validationProductPrice()"
+          />
+          <small id="validPrice" class="text-danger text-start"></small>
 
           <label for="productCategoryInp" class="text-start text-white p-2"
             >Product Category</label
@@ -34,14 +44,15 @@
             type="text"
             id="productCategoryInp"
             class="form-control mb-3"
+            oninput="validationProductCategory()"
           />
-          <span id="validCategory" class="text-danger"></span>
+          <small id="validCategory" class="text-danger text-start"></small>
 
           <label for="productDescInp" class="text-start text-white p-2"
             >Product Description</label
           >
-          <input type="text" id="productDescInp" class="form-control mb-3" />
-          <span id="validDesc" class="text-danger"></span>
+          <input type="text" id="productDescInp" class="form-control mb-3"  oninput="validationProductDesc()"/>
+          <small id="validDesc" class="text-danger text-start"></small>
 
           <button
             class="btn btn-success btn-sm w-50 p-2 my-3"
